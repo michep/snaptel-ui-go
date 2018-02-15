@@ -1,4 +1,4 @@
-//go:generate esc -o=web\static.go -pkg=web -prefix web\app\dist web\app\dist
+//go:generate esc -o=web/static.go -pkg=web -prefix web/app/dist web/app/dist
 
 package main
 
