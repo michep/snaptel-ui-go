@@ -38,6 +38,7 @@ func LoadServersList(fname string) error {
 		}
 	}
 	initialized = true
+	log.Printf("%v hosts loaded from file", len(servers))
 	return nil
 }
 
