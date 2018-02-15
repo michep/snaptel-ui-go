@@ -1,0 +1,21 @@
+<h2>{{ server.host }}</h2>
+<div class="card p-2">
+  <table class="table col-12">
+    <thead class="thead-default">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Version</th>
+        <th>Loaded time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plugin of serverPlugins">
+        <td>{{ plugin.name }}</td>
+        <td>{{ plugin.type }}</td>
+        <td>{{ plugin.version }}</td>
+        <td>{{ util.getDateString(plugin.loaded_timestamp) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

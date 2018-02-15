@@ -1,0 +1,37 @@
+<h2>{{ server.host }}</h2>
+<div class="card p-2">
+  <table class="table col-12">
+    <thead class="thead-default">
+      <tr>
+        <th>Id</th>
+        <th>Created</th>
+        <th>State</th>
+        <th>Last run time</th>
+        <th style="text-align: right">Hit count</th>
+        <th style="text-align: right">Fail count</th>
+        <th>Details</th>
+        <th>Start</th>
+        <th>Stop</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of serverTasks" [style.background-color]="(task.hit_count - task.failed_count) == 0 ? 'LightPink' : 'inherit'">
+        <td>{{ task.id }}</td>
+        <td>{{ util.getDateString(task.creation_timestamp) }}</td>
+        <td>{{ task.task_state }}</td>
+        <td>{{ util.getDateString(task.last_run_timestamp) }}</td>
+        <td style="text-align: right">{{ task.hit_count }}</td>
+        <td style="text-align: right">{{ task.failed_count }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" [routerLink]="[task.id, 'info']">Details</button>
+        </td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="startTask(task)">Start</button>
+        </td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="stopTask(task)">Stop</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

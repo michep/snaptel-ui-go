@@ -1,0 +1,21 @@
+<h2>{{ server.host }}</h2>
+<div class="card p-2">
+  <table class="table col-12">
+    <thead class="thead-default">
+      <tr>
+        <th>Namespace</th>
+        <th>Dynamic</th>
+        <th>Version</th>
+        <th>Last advertised time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let metric of serverMetrics">
+        <td>{{ metric.namespace }}</td>
+        <td>{{ metric.dynamic }}</td>
+        <td>{{ metric.version }}</td>
+        <td>{{ util.getDateString(metric.last_advertised_timestamp) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

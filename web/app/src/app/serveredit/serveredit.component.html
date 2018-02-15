@@ -1,0 +1,17 @@
+<form class="col-4" [formGroup]="form" (ngSubmit)="saveServer(server)">
+  <fieldset>
+    <div class="form-group">
+      <label for="proto">Protocol</label>
+      <input class="form-control" id="proto" type="text" formControlName="proto" [(ngModel)]="server.proto">
+    </div>
+    <div class="form-group">
+      <label for="hostname">Hostname</label>
+      <input class="form-control" id="hostname" type="text" formControlName="hostname" [(ngModel)]="server.host">
+    </div>
+    <div class="form-group">
+      <label for="port">Port</label>
+      <input class="form-control" id="port" type="number" formControlName="port" [(ngModel)]="server.port">
+    </div>
+    <button type="submit" [disabled]="form.invalid">Save</button>
+  </fieldset>
+</form>

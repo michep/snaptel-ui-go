@@ -1,0 +1,14 @@
+<h2>Snap Servers List</h2>
+<div class="card flex-row p-2" [style.background-color]="server.available == undefined || server.available ? 'inherit' : 'LightPink'"
+  *ngFor="let server of servers">
+  <div class="mr-auto">{{ server.host }}</div>
+  <div class="mr-4">
+    <button class="btn btn-light btn-sm" [routerLink]="[server.key, 'plugins']" [disabled]="server.available == false">Plugins</button>
+    <button class="btn btn-light btn-sm" [routerLink]="[server.key, 'metrics']" [disabled]="server.available == false">Metrics</button>
+    <button class="btn btn-light btn-sm" [routerLink]="[server.key, 'tasks']" [disabled]="server.available == false">Tasks</button>
+  </div>
+  <!--<div>
+    <button class="btn btn-light btn-sm" [routerLink]="[server.key, 'edit']">Edit</button>
+    <button class="btn btn-danger btn-sm" (click)="deleteServer(server)">Remove</button>
+  </div>-->
+</div>

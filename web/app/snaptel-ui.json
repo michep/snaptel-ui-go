@@ -1,0 +1,88 @@
+{
+  "snaptel_servers" : {
+    "045993d1-c3a3-b4e1-1dcd-636b036e5998" : {
+      "host" : "mdz.mfms",
+      "key" : "045993d1-c3a3-b4e1-1dcd-636b036e5998",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "1bd51f9a-6ba9-71b0-139f-2330b431cb04" : {
+      "host" : "box.mfms",
+      "key" : "1bd51f9a-6ba9-71b0-139f-2330b431cb04",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "46500c98-882e-b5db-ea2b-184069488f47" : {
+      "host" : "rax.mfms",
+      "key" : "46500c98-882e-b5db-ea2b-184069488f47",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "5947a578-2902-dce4-aba0-ead430b2b5bc" : {
+      "host" : "mdb.mfms",
+      "key" : "5947a578-2902-dce4-aba0-ead430b2b5bc",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "623fdb0b-09b0-ebdd-adf4-e4073527c9d4" : {
+      "host" : "non.mfms",
+      "key" : "623fdb0b-09b0-ebdd-adf4-e4073527c9d4",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "74b9176a-222e-740f-f535-18e22d976a38" : {
+      "host" : "zen.mfms",
+      "key" : "74b9176a-222e-740f-f535-18e22d976a38",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "7d2ea939-445a-6036-b356-f079b2b7ca4d" : {
+      "host" : "rox.mfms",
+      "key" : "7d2ea939-445a-6036-b356-f079b2b7ca4d",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "93e9623d-74c8-067b-cbc1-d4e5cf148e95" : {
+      "host" : "bux.mfms",
+      "key" : "93e9623d-74c8-067b-cbc1-d4e5cf148e95",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "a107bb20-13e0-7044-9d37-af33e08102a6" : {
+      "host" : "mex.mfms",
+      "key" : "a107bb20-13e0-7044-9d37-af33e08102a6",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "cd9f7ccf-d9fe-c34f-0756-d53a07d9d15b" : {
+      "host" : "jox.mfms",
+      "key" : "cd9f7ccf-d9fe-c34f-0756-d53a07d9d15b",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "cfef9f1d-4ec6-3816-8002-dc79badd291c" : {
+      "host" : "lun.mfms",
+      "key" : "cfef9f1d-4ec6-3816-8002-dc79badd291c",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "f16ce3ad-8932-a58c-5922-4dff56e2a860" : {
+      "host" : "mdc.mfms",
+      "key" : "f16ce3ad-8932-a58c-5922-4dff56e2a860",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "f4858aa2-e4f1-929a-7edd-5340ebe9d65a" : {
+      "host" : "mda.mfms",
+      "key" : "f4858aa2-e4f1-929a-7edd-5340ebe9d65a",
+      "port" : 8181,
+      "proto" : "http"
+    },
+    "fbe55bb9-02bc-67cc-375a-6654e12c3efb" : {
+      "host" : "zun.mfms",
+      "key" : "fbe55bb9-02bc-67cc-375a-6654e12c3efb",
+      "port" : 8181,
+      "proto" : "http"
+    }
+  }
+}

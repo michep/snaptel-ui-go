@@ -1,0 +1,67 @@
+<h2>{{ server.host }}</h2>
+<div class="card p-2">
+  <div class="col-12">
+    <table class="table">
+      <tr>
+        <td>Id</td>
+        <td>{{ taskInfo.id }}</td>
+      </tr>
+      <tr>
+        <td>Created</td>
+        <td>{{ util.getDateString(taskInfo.creation_timestamp) }}</td>
+      </tr>
+      <tr>
+        <td>Schedule type</td>
+        <td>{{ taskInfo.schedule?.type }}</td>
+      </tr>
+      <tr>
+        <td>Schedule interval</td>
+        <td>{{ taskInfo.schedule?.interval }}</td>
+      </tr>
+      <tr>
+        <td>Deadline</td>
+        <td>{{ taskInfo.deadline }}</td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td>{{ taskInfo.task_state }}</td>
+      </tr>
+      <tr>
+        <td>Metrics</td>
+        <td>
+          <div *ngFor="let metric of metrics">
+            {{ metric }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Last run time</td>
+        <td>{{ util.getDateString(taskInfo.last_run_timestamp) }}</td>
+      </tr>
+      <tr>
+        <td>Hit count</td>
+        <td>{{ taskInfo.hit_count }}</td>
+      </tr>
+      <tr>
+        <td>Miss count</td>
+        <td>{{ taskInfo.miss_count }}</td>
+      </tr>
+      <tr>
+        <td>Fail count</td>
+        <td>{{ taskInfo.failed_count }}</td>
+      </tr>
+      <tr>
+        <td>Last failure message</td>
+        <td>{{ taskInfo.last_failure_message }}</td>
+      </tr>
+      <tr>
+        <td>Workflow</td>
+        <td>
+          <pre>{{ taskInfo.workflow | json }}</pre>
+        </td>
+      </tr>
+    </table>
+    <button class="btn btn-light btn-sm" (click)="startTask(taskInfo)">Start</button>
+    <button class="btn btn-danger btn-sm" (click)="stopTask(taskInfo)">Stop</button>
+  </div>
+</div>
