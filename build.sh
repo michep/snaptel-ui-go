@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pushd web/app/
-bash -c ng build
+bash -c "ng build"
 popd
 
 go generate
