@@ -1,4 +1,4 @@
-# snaptel-ui-go
+# snaptel-ui
 UI for snap-telemetry nodes. Give access to plugins, metrics, tasks list and individual tasks on each snap-telemetry node.
 
 ## Build
