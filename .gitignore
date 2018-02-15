@@ -1,4 +1,5 @@
 .idea
 vendor
+dist
 
 web/static.go
