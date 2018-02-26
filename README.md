@@ -19,5 +19,5 @@ That's all, falks! :)
 Command line parameters:
 ```
 -l --listen    - listen address, ex: ":8888", "127.0.01:6060"
--f --file     - file with snap-telemetry hosts list in form of 'schema://hostname:port', one host per line
+-f --file      - file with snap-telemetry hosts list in form of 'schema://hostname:port', one host per line
 ```
