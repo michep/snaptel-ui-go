@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ServerlistComponent } from './serverlist/serverlist.component';
-import { ServereditComponent } from './serveredit/serveredit.component';
 import { TasklistComponent } from './tasklist/tasklist.component';
 import { TaskinfoComponent } from './taskinfo/taskinfo.component';
 import { MetriclistComponent } from './metriclist/metriclist.component';
@@ -30,7 +29,6 @@ import { IServerlistService, ISnapService } from './shared/snap';
     ServerlistComponent,
     TasklistComponent,
     TaskinfoComponent,
-    ServereditComponent,
     MetriclistComponent,
     PluginlistComponent,
     NavbarComponent
