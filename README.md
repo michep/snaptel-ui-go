@@ -13,7 +13,7 @@ First, install dependencies with deps.(bat|sh) script.
 
 Then build app with build.(bat|sh) script.
 
-That's all, falks! :)
+That's all, folks! :)
 
 ## Usage
 Command line parameters:

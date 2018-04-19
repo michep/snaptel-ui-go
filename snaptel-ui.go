@@ -24,10 +24,7 @@ func main() {
 	serverslist.LoadServersList(par.SnapListFile)
 
 	r := mux.NewRouter()
-	//r.Methods("PUT").Path("/serversapi/{id}").HandlerFunc(web.UpdateServer)
-	//r.Methods("DELETE").Path("/serversapi/{id}").HandlerFunc(web.DeleteServer)
 	r.Methods("GET").Path("/serversapi/{id}").HandlerFunc(web.GetServer)
-	//r.Methods("POST").PathPrefix("/serversapi").HandlerFunc(web.CreateServer)
 	r.Methods("GET").PathPrefix("/serversapi").HandlerFunc(web.GetServersList)
 	r.PathPrefix("/serversapi").HandlerFunc(http.NotFound)
 
