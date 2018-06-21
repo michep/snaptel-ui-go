@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
-
-import { UUID } from 'angular2-uuid';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Util } from './util';
 
@@ -20,26 +17,28 @@ export class ServerlistLocalService implements IServerlistService {
   }
 
   getServer(key: string): Observable<SnapServer> {
-    return this.http.get(this.localServerApi + encodeURIComponent(key))
-      .map(
+    return this.http.get(this.localServerApi + encodeURIComponent(key)).pipe(
+      map(
         data => {
           return data.json() as SnapServer;
         }
-      );
+      )
+    );
   }
 
   getServerList(): Observable<SnapServer[]> {
-    return this.http.get(this.localServerApi)
-    .map(
-      data => {
-        const servers: SnapServer[] = [];
-        const d = data.json();
-        for (const k of Object.keys(d)) {
-          servers.push(d[k] as SnapServer);
+    return this.http.get(this.localServerApi).pipe(
+      map(
+        data => {
+          const servers: SnapServer[] = [];
+          const d = data.json();
+          for (const k of Object.keys(d)) {
+            servers.push(d[k] as SnapServer);
+          }
+          servers.sort(this.compareSnapServers);
+          return servers;
         }
-        servers.sort(this.compareSnapServers);
-        return servers;
-      }
+      )
     );
   }
 

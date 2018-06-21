@@ -1,5 +1,5 @@
 pushd web\app\
-cmd.exe /c ng build -prod
+cmd.exe /c ng build --prod
 popd
 
 go generate
