@@ -3,7 +3,7 @@
   <table class="table col-12">
     <thead class="thead-default">
       <tr>
-        <th>Id</th>
+        <th>Name</th>
         <th>Created</th>
         <th>State</th>
         <th>Last run time</th>
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let task of serverTasks" [style.background-color]="(task.hit_count - task.failed_count) == 0 ? 'LightPink' : 'inherit'">
-        <td>{{ task.id }}</td>
+        <td>{{ task.name }}</td>
         <td>{{ util.getDateString(task.creation_timestamp) }}</td>
         <td>{{ task.task_state }}</td>
         <td>{{ util.getDateString(task.last_run_timestamp) }}</td>
